@@ -32,20 +32,19 @@ const SingleToDo = ({ todo, todos, setTodos }: Props1) => {
     setTodos(
       todos.map((todo) => (todo.id === id ? { ...todo, todo: editTodo } : todo))
     );
-    setEdit(false)
+    setEdit(false);
   };
-  const autofocusOnEdit = useRef<HTMLInputElement>(null)
+  const autofocusOnEdit = useRef<HTMLInputElement>(null);
 
-  useEffect(() =>{
-    autofocusOnEdit.current?.focus()
-  }, [edit])
-
+  useEffect(() => {
+    autofocusOnEdit.current?.focus();
+  }, [edit]);
 
   return (
     <form className="todos__single" onSubmit={(e) => handleEdit(e, todo.id)}>
       {edit ? (
         <input
-        ref={autofocusOnEdit}
+          ref={autofocusOnEdit}
           value={editTodo}
           onChange={(e) => setEditTodo(e.target.value)}
           className="todos__single--text"

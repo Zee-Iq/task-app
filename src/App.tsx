@@ -7,7 +7,7 @@ import TodoList from "./Components/TodoList";
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
-  const autofocus = useRef(null)
+  /* const autofocus = useRef(null) */
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -23,7 +23,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <span className="heading">Task List</span>
-      <InputField /* ref={autofocus} */ todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
+      <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
       <TodoList todos={todos} setTodos={setTodos} />
    {/*    {todos.map((t) => (
         <li> {t.todo} </li>

@@ -9,14 +9,13 @@ interface Props {
 
 const InputField: React.FC<Props> = ({ todo, setTodo, handleAdd }: Props) => {
   const inputRef = useRef<HTMLInputElement>(null);
-  
 
   return (
     <form
       className="input"
       onSubmit={(e) => {
         handleAdd(e);
-        inputRef.current?.blur()
+        inputRef.current?.blur();
       }}
     >
       <input

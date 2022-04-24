@@ -9,15 +9,33 @@ interface Props {
 
 const TodoList = ({ todos, setTodos }: Props) => {
   return (
-    <div className="todos">
-      {todos.map((todo) => (
-        <SingleToDo
-          todo={todo}
-          key={todo.id}
-          todos={todos}
-          setTodos={setTodos}
-        />
-      ))}
+    <div className="container">
+      <div className="todos">
+        
+        <span className="todos__heading">Open Tasks</span>
+
+        {todos.map((todo) => (
+          <SingleToDo
+            todo={todo}
+            todos={todos}
+            key={todo.id}
+            setTodos={setTodos}
+          />
+        ))}
+      </div>
+      
+      <div className="todos remove">
+      <span className="todos__heading">Completed Tasks</span>
+
+{todos.map((todo) => (
+  <SingleToDo
+    todo={todo}
+    todos={todos}
+    key={todo.id}
+    setTodos={setTodos}
+  />
+))}
+      </div>
     </div>
   );
 };
