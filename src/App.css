@@ -1,13 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');.App {
   width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #425648;
-  font-family: 'Amatic SC', cursive;}
-
+  font-family: "Indie Flower", cursive;
+}
 .heading {
   text-transform: uppercase;
   font-size: 40px;
