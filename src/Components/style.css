@@ -134,3 +134,30 @@
     margin-bottom: 10px;
   }
 }
+@media (max-width: 375px) {
+  .input {
+    width: 90%;
+  }
+  .container {
+    width: 90%;
+    flex-direction: column;
+  }
+  .todos {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 414px) {
+  .input {
+    width: 90%;
+  }
+  .container {
+    width: 90%;
+    flex-direction: column;
+  }
+  .todos {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+}
+
