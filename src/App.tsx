@@ -54,7 +54,7 @@ const App: React.FC = () => {
   };
 
   /* sing up and sign in with google states */
-/*   const [name, setName] = useState("");
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -69,7 +69,7 @@ const App: React.FC = () => {
     });
     const data = await response.json();
     console.log(data);
-  }; */
+  };
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
