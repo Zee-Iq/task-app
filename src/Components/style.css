@@ -138,6 +138,29 @@
   .input {
     width: 90%;
   }
+  .input_submit{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+  }
+  .container {
+    width: 90%;
+    flex-direction: column;
+  }
+  .todos {
+    width: 95%;
+    margin-bottom: 10px;
+  }
+}
+@media (max-width: 133px) {
+  .input {
+    width: 90%;
+  }
+  .input_submit{
+    width: 40px;
+    height: 40px;
+    font-size: 1.5em;
+  }
   .container {
     width: 90%;
     flex-direction: column;
@@ -152,8 +175,9 @@
     width: 90%;
   }
   .container {
-    width: 90%;
+    width: 85%;
     flex-direction: column;
+    margin-right: 1em;
   }
   .todos {
     width: 95%;
