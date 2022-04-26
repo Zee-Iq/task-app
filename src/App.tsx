@@ -5,6 +5,7 @@ import Todo from "./Model/model";
 import TodoList from "./Components/TodoList";
 import { DragDropContext, DropResult } from "react-beautiful-dnd";
 
+
 const App: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
@@ -49,13 +50,32 @@ const App: React.FC = () => {
     } else {
       complete.splice(destination.index, 0, add);
     }
-    setcompletedTodos(complete)
-    setTodos(active)
+    setcompletedTodos(complete);
+    setTodos(active);
   };
+
+  /* sing up and sign in with google states */
+   const [name, setName] = useState("");
+   const [email, setEmail] = useState("");
+   const [password, setPassword] = useState("");
 
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <div className="App">
+        {/* sign up and sign in with google */}
+        <h1>Register</h1>
+        <form >
+          <input 
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          type="text"
+          placeholder="Name"
+          
+          />
+          <input type="text" placeholder="Email" />
+          <input type="text" placeholder="Password" />
+        </form>
+
         <span className="heading">Task List</span>
         <InputField todo={todo} setTodo={setTodo} handleAdd={handleAdd} />
         <TodoList
